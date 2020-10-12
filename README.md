@@ -43,7 +43,38 @@ fd -H -L -t d "."  "$HOME" | isgit | fzf \
   --preview 'git -C {} log --color=always --pretty=oneline --abbrev-commit'
 ``` 
 
+### Install
+
+#### Binary Releases
+
+| OS      | Arch  | Binary                                                                                                    |
+|---------|-------|-----------------------------------------------------------------------------------------------------------|
+| Linux   | amd64 | [isgit-linux-amd64](https://github.com/aead/isgit/releases/latest/download/isgit-linux-amd64)             |
+| MacOS   | amd64 | [isgit-darwin-amd64](https://github.com/aead/isgit/releases/latest/download/isgit-darwin-amd64)           |
+| Windows | amd64 | [isgit-windows-amd64.exe](https://github.com/aead/isgit/releases/latest/download/isgit-windows-amd64.exe) |
+| FreeBSD | amd64 | [isgit-freebsd-amd64](https://github.com/aead/isgit/releases/latest/download/isgit-freebsd-amd64)         |
+|         |       |                                                                                                           |
+| Linux   | arm   | [isgit-linux-arm](https://github.com/aead/isgit/releases/latest/download/isgit-linux-arm)                 |
+| Linux   | arm64 | [isgit-linux-arm64](https://github.com/aead/isgit/releases/latest/download/isgit-linux-arm64)             |
+
+#### Download via cURL
+
+| OS      | Arch  | cURL Command                      |
+|---------|-------|-----------------------------|
+| Linux   | amd64 | `curl -SL --tlsv1.2 -o isgit https://github.com/aead/isgit/releases/latest/download/isgit-linux-amd64`           |
+| MacOS   | amd64 | `curl -SL --tlsv1.2 -o isgit https://github.com/aead/isgit/releases/latest/download/isgit-darwin-amd64`          |
+| Windows | amd64 | `curl -SL --tlsv1.2 -o isgit.exe https://github.com/aead/isgit/releases/latest/download/isgit-windows-amd64.exe` |
+| FreeBSD | amd64 | `curl -SL --tlsv1.2 -o isgit https://github.com/aead/isgit/releases/latest/download/isgit-freebsd-amd64`         |
+|         |       |                                                                                                                  |
+| Linux   | arm   | `curl -SL --tlsv1.2 -o isgit https://github.com/aead/isgit/releases/latest/download/isgit-linux-arm`             |
+| Linux   | arm64 | `curl -SL --tlsv1.2 -o isgit https://github.com/aead/isgit/releases/latest/download/isgit-linux-arm64`           |
+
+#### From Source
+
+```sh
+go get github.com/aead/isgit
+```
+
 ### License
 
 Use of `isgit` is governed by the MIT license that can be found in the LICENSE file.
-
