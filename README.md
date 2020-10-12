@@ -28,7 +28,7 @@ isgit $HOME/project $HOME/my-repo
 
 Find all git repositories under `$HOME` using [`fd`](https://github.com/sharkdp/fd) or GNU `find`:
 ```sh
-fd -HL -t d "."  "$HOME/go" | isgit
+fd -HL -t d "."  "$HOME" | isgit
 ```
 ```sh
 find -L "$HOME" -type d | isgit
