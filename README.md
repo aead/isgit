@@ -36,12 +36,14 @@ find -L "$HOME" -type d | isgit
 > The output of both commands may differ because `fd` honors ignore files. See `fd --help`
 
 Fuzzy-search all git repositories under `$HOME` using [`fzf`](https://github.com/junegunn/fzf)
-and [`fd`](https://github.com/sharkdp/fd) and a show commit history preview:
+and [`fd`](https://github.com/sharkdp/fd) and show a commit history preview:
 ```sh
 fd -H -L -t d "."  "$HOME" | isgit | fzf \
   --height 100% --reverse --border --preview-window right:50% \
   --preview 'git -C {} log --color=always --pretty=oneline --abbrev-commit'
 ``` 
+
+![Example](example.png)
 
 ### Install
 
@@ -59,8 +61,8 @@ fd -H -L -t d "."  "$HOME" | isgit | fzf \
 
 #### Download via cURL
 
-| OS      | Arch  | cURL Command                      |
-|---------|-------|-----------------------------|
+| OS      | Arch  | cURL Command                                                                                                     |
+|---------|-------|------------------------------------------------------------------------------------------------------------------|
 | Linux   | amd64 | `curl -SL --tlsv1.2 -o isgit https://github.com/aead/isgit/releases/latest/download/isgit-linux-amd64`           |
 | MacOS   | amd64 | `curl -SL --tlsv1.2 -o isgit https://github.com/aead/isgit/releases/latest/download/isgit-darwin-amd64`          |
 | Windows | amd64 | `curl -SL --tlsv1.2 -o isgit.exe https://github.com/aead/isgit/releases/latest/download/isgit-windows-amd64.exe` |
